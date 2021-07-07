@@ -6,8 +6,12 @@ var dataNasc;
 var imgsComics = " ";
 function getAllComics(){
     fetch("http://localhost:8080/api/comics/").then(response =>{return response.json();}).then(allComics => createListComic(allComics));
+    document.getElementById("imgList").innerHTML="";
+    imgsComics = "";
+    listComic = "";
 }
 function createListComic(allComics){
+
     if(allComics["length"]>0) {
         addComcisImagen(allComics);
 
@@ -27,8 +31,9 @@ function addComcisImagen(allComics){
 
 }
 function setImgComic(dataApi){
-    imgsComics +="<button  onClick=\"saveComic("+dataApi["data"]["results"][0]["id"]+")\" id=\""+dataApi["data"]["results"][0]["id"]+"\"  class=\"btn btn-primary\">" +
-                    "<img style=\"width: 150px; height: 223px; margin: 30px \" aria-describedby=\"Olhaa\" src=\" "+getUrlImgView(dataApi)+"\">" +
+    imgsComics +="<button  style=\"background-color: white; padding: 5px; border-color: white\" onClick=\"saveComic("+dataApi["data"]["results"][0]["id"]+")\" id=\""+dataApi["data"]["results"][0]["id"]+"\"  class=\"btn btn-primary\">" +
+                    "<img style=\"width: 150px; height: 223px;\" aria-describedby=\"Olhaa\" src=\" "+getUrlImgView(dataApi)+"\">" +
+                    "" +
                     "</button>";
     document.getElementById("imgList").innerHTML = imgsComics;
 

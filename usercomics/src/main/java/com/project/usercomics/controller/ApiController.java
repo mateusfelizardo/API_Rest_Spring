@@ -5,7 +5,6 @@ import com.project.usercomics.model.Usuario;
 import com.project.usercomics.repository.ComicsRepository;
 import com.project.usercomics.repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

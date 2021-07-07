@@ -2,6 +2,7 @@ package com.project.usercomics.model;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
+import javax.xml.bind.annotation.XmlAttribute;
 
 
 @Entity
@@ -26,7 +27,7 @@ public class Comics{
     private String descricao;
 
 
-    private boolean deconto;
+    private boolean desconto;
 
     public Long getId() {
         return id_comic;
