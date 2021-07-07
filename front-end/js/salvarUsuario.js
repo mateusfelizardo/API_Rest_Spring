@@ -40,7 +40,6 @@ function setImgComic(dataApi){
 }
 function saveComic(id){
 
-    console.log(id);
     if (listComic == "") {
         listComic += '{ "id":'+id+'}';
     }else {
@@ -48,10 +47,6 @@ function saveComic(id){
     }
 
     document.getElementById(id).disabled = true;
-
-
-
-    console.log(listComic);
 }
 function salvarUsuario(){
 

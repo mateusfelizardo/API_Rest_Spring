@@ -1,9 +1,6 @@
 package com.project.usercomics.model;
-
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
-import javax.xml.bind.annotation.XmlAttribute;
-
 
 @Entity
 @Table(name = "TB_Comics")

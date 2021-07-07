@@ -1,5 +1,4 @@
 package com.project.usercomics.config;
-
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import springfox.documentation.builders.RequestHandlerSelectors;
@@ -9,9 +8,7 @@ import springfox.documentation.service.VendorExtension;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
-
 import java.util.ArrayList;
-
 import static springfox.documentation.builders.PathSelectors.regex;
 
 @Configuration
@@ -26,9 +23,7 @@ public class SwaggerConfig {
                 .build()
                 .apiInfo(metaInfo());
     }
-
     private ApiInfo metaInfo() {
-
         ApiInfo apiInfo = new ApiInfo(
                 "User Comics API REST",
                 "API REST de cadastro de usuarios e comics.",
@@ -39,7 +34,6 @@ public class SwaggerConfig {
                 "Apache License Version 2.0",
                 "https://www.apache.org/licesen.html", new ArrayList<VendorExtension>()
         );
-
         return apiInfo;
     }
 }

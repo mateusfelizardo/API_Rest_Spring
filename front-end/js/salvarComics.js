@@ -1,4 +1,4 @@
-var idComic ;
+var idComic;
 var idQry;
 var tituloComic;
 var preco;
@@ -21,9 +21,7 @@ function buscarComicApi(){
 
 }
 function setDadosCampos(comicEsp){
-
     if (comicEsp["code"]=200 && comicEsp["status"] == "Ok" ) {
-
         document.getElementById("titulo").value = comicEsp["data"]["results"][0]["title"];
         document.getElementById("id").value = comicEsp["data"]["results"][0]["id"];
         if (comicEsp["data"]["results"][0]["price"] != "") {
@@ -36,7 +34,6 @@ function setDadosCampos(comicEsp){
         }else {
             document.getElementById("isbn").value = "";
         }
-
         if (comicEsp["data"]["results"][0]["description"] != "") {
             document.getElementById("descricao").value = comicEsp["data"]["results"][0]["description"];
         }else{
@@ -76,7 +73,6 @@ function salvarComic() {
             "titulo": tituloComic
         }));
         alert("Comic cadastrada com sucesso!!");
-        console.log(idComic+15);
     }else {
         alert("Ha campos em branco ou a Comic nao foi pesquisada");
     }

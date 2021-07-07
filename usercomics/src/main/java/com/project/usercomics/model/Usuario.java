@@ -1,13 +1,9 @@
 package com.project.usercomics.model;
 import com.fasterxml.jackson.annotation.JsonFormat;
-
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.List;
-
-
 
 @Entity
 @Table(name = "TB_Usuario")
